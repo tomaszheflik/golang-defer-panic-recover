@@ -16,14 +16,13 @@ func (httpCrawler) Get(url string) {
 	fmt.Printf("Time: %d to parse %s\n", wait, url)
 }
 
-var http httpCrawler
-
 func main() {
+	var http httpCrawler
 	var wg sync.WaitGroup
 	var urls = []string{
-		"http://www.golang.org/",
-		"http://www.google.com/",
-		"http://www.someslltupidname.com/",
+		"http://www.sap.com/",
+		"http://www.hybris.com/",
+		"http://www.linux.org/",
 	}
 	for _, url := range urls {
 		wg.Add(1)
